@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* background-color: grey; */
+    font-family: "Didact Gothic", sans-serif;
+}
+
+header {
+    background-color: black;
+    height: 1in;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    color: white;
+}
+
+main {
+    margin-left: 220px;
+    margin-right: 220px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#search-div p {
+    padding: 10px 0;
+}
+
+#search {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+}
+
+#search-div input {
+    padding: 8px;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#search-div button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#result-div {    
+    padding-top: 30px;
+}
+
+#result-div h2 {
+    padding-bottom: 25px;
+    text-transform: uppercase;
+}
+
+#result {
+    padding-top: 20px;
+}
+
+#result ul {
+    padding-left: 30px;
+}
+
+#result span {
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#result h3, h4 {
+    text-transform: uppercase;
+}
+
+#result p {
+    padding-top: 20px;
+}
