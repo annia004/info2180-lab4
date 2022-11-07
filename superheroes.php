@@ -65,8 +65,29 @@ $superheroes = [
 
 ?>
 
+<?php 
+    if($_SERVER["REQUEST_METHOD"] == "GET") {
+        $q = $_REQUEST["q"];
+        $response = "";
+        $searchval = ucwords(trim(filter_var($q, FILTER_SANITIZE_STRING)));
+        if(isset($searchval) && !empty($searchval)) {
+            foreach($superheroes as $hero) {
+                if($hero["name"] === $searchval || $hero["alias"] === $searchval) {
+                    $response = "<h3>{$hero["alias"]}</h3> <h4>a.k.a {$hero["name"]}</h4> <p>{$hero["biography"]}</p>";
+                    break;
+                }
+            }
+            
+            echo $response = empty($response) ? "<span>Superhero not found</span>" : $response;
+        }
+
+        else { 
+?>            
 <ul>
-<?php foreach ($superheroes as $superhero): ?>
+<?php foreach($superheroes as $superhero): ?>
   <li><?= $superhero['alias']; ?></li>
 <?php endforeach; ?>
 </ul>
+        <?php } ?>
+<?php } ?>
+
